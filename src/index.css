@@ -1,0 +1,10 @@
+:root {
+  --inter: "Inter Variable", system-ui, sans-serif;
+  --roboto: "Roboto Variable", system-ui, sans-serif;
+  --cairo: "Cairo Variable", system-ui, sans-serif;
+  --sans:  "Open Sans Variable", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+}
