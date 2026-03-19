@@ -1,0 +1,85 @@
+p {
+    width: fit-content;
+    height: fit-content;
+    text-transform: none;
+}
+
+.h1 {
+    color: $text-black;
+
+    font-family: $cairo;
+    font-style: "Semi Bold";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -1.5%;
+}
+
+.h2 {
+    color: $text-black;
+
+    font-family: $cairo;
+    font-style: Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0%;
+}
+
+.h3 {
+    color: $color-black-secondary;
+
+    font-family: $cairo;
+    font-style: Bold;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+.secondary1 {
+    color: $color-gray-alt;
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.secondary2 {
+    color: $color-gray-alt;
+    font-family: $inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.regular1 {
+    color: $color-gray-medium;
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.bold1 {
+    color: $color-white;
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -1%;
+}
+
+.label {
+    color: $text-black;
+
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -1.5%;
+    text-align: left; 
+}

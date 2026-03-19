@@ -1,0 +1,63 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.input {
+    height: 52px;
+    padding: 14px 16px;
+    border-radius: 12px !important;
+    gap: 14px;
+
+    > input {
+        padding: 0;
+        height: 24px;
+
+        color: $text-black;
+        font-family: $inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -1.5%;
+    }
+}
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.startadornment {
+    margin-right: 0 !important;
+}
+
+.endadornment {
+    margin: 0 !important;
+    gap: 4px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.helpertext {
+    height: 16px;
+    > p {
+        color: red;
+        margin-top: 0;
+    }
+}
+
+.checkbox {
+    font-family: $inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: $color-gray-alt;
+    span > svg {
+        fill: $color-gray-alt;
+    }
+}

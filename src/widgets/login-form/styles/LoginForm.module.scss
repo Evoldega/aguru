@@ -1,0 +1,42 @@
+.loginForm {
+    padding: 6px;
+    border-radius: 40px;
+    background: $color-white;
+    box-shadow: 0px 24px 32px 0px rgba(0, 0, 0, 0.04);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border: 1px solid #23232308;
+    border-radius: 34px;
+
+    background: $gradient-light-gray-50;
+    padding: 48px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link {
+    font-family: $inter !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 150% !important;
+    letter-spacing: 0% !important;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: $color-blue-primary !important;
+    color: $color-blue-primary !important;
+}
