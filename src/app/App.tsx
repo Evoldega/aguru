@@ -1,10 +1,11 @@
-import { LoginPage } from "pages/login-page/ui/LoginPage";
-
+import { LoginPage } from "pages/login/ui/LoginPage";
+import ProductsPage from "pages/products/ui/ProductsPage";
 
 function App() {
   return (
     <>
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <ProductsPage /> 
     </>
   )
 }
