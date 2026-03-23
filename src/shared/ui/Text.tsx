@@ -1,4 +1,4 @@
-import styles from "../styles/Text.module.scss"
+import { Text as styles } from "../styles/index";
 
 interface IText {
     content: string;

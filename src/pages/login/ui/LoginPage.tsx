@@ -1,4 +1,4 @@
-import { LoginForm } from "widgets/login-form/ui/LoginForm";
+import LoginForm from "widgets/login-form/index";
 import styles from "pages/login/styles/LoginPage.module.scss";
 
 export const LoginPage = () => {

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { createJSONStorage } from 'zustand/middleware';
 import { loginRequest } from '../api/login';
-import { useUserStore } from 'entities/user/model/useUserStore';
+import { useUserStore } from 'entities/user/index';
 import { useRememberMeStore } from './useRememberMeStore';
 
 interface AuthState {

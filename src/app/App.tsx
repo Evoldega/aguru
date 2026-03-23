@@ -1,5 +1,5 @@
-import { LoginPage } from "pages/login/ui/LoginPage";
-import ProductsPage from "pages/products/ui/ProductsPage";
+import LoginPage from "pages/login/index";
+import ProductsPage from "pages/products/index";
 
 function App() {
   return (

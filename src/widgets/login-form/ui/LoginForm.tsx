@@ -1,4 +1,4 @@
-import { Auth } from "features/auth/ui/Auth";
+import Auth from "features/auth/index";
 import styles from "../styles/LoginForm.module.scss";
 import Logo from "shared/ui/Logo";
 import Text from "shared/ui/Text";

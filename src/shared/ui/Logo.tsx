@@ -1,4 +1,4 @@
-import styles from "../styles/Logo.module.scss"
+import { Logo as styles } from "../styles/index"
 import logo from "assets/logo.svg"
 
 function Logo() {
