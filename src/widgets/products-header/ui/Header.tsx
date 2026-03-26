@@ -1,13 +1,18 @@
-import Text from "shared/ui/Text";
-import styles from "widgets/products-header/styles/Header.module.scss";
+import { ProductsSearch } from "features/products-search/index";
+import Text from "shared/ui/Text/Text";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return(
     <header className={styles.header}>
-      <Text
-        content="Товары"
-        variant="h2"
-      />
+      <div className={styles.title}>
+        <Text
+          content="Товары"
+          variant="h2"
+        />        
+      </div>
+
+      <ProductsSearch />
     </header>
   );
 };

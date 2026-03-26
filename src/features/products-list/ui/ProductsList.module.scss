@@ -1,0 +1,93 @@
+.table {
+    height: 100% !important;
+    overflow-y: hidden;
+}
+
+.titles {
+    overflow: hidden;
+}
+
+.titles > p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.titleCell {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 100%;
+}
+.thumbnail {
+    border-radius: 8px;
+    border: 1px solid $color-gray-light-alt;
+}
+.vendorCell {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.ratingCell {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.priceCell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.priceContainer {
+    display: flex;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+}
+.addButton {
+    border-radius: 23px !important;
+    background-color: $color-blue-primary !important;
+    height: 27px !important;
+    min-width: none !important;
+    width: 52px !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.optionsButton {
+    border: none !important;
+    background-color: inherit !important;
+    height: 26px !important;
+    min-width: none !important;
+    width: 26px !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.sortIcon {
+    transform: rotate(0deg);
+    color: $color-gray-medium;
+    transition: transform 0.2s;
+    margin-left: 8px;
+    &:hover {
+        color: $color-gray-alt;
+    }
+    &_rotated {
+        transform: rotate(180deg);
+        color: $color-gray-medium;
+        margin-left: 8px;
+        &:hover {
+            color: $color-gray-alt;
+        }
+    }
+    &_disabled {
+        color: $color-gray-light-alt;
+        margin-left: 8px;
+        &:hover {
+            color: $color-gray-alt;
+        }
+    }
+}

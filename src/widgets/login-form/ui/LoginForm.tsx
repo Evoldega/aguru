@@ -1,7 +1,7 @@
 import Auth from "features/auth/index";
-import styles from "../styles/LoginForm.module.scss";
-import Logo from "shared/ui/Logo";
-import Text from "shared/ui/Text";
+import styles from "./LoginForm.module.scss";
+import Logo from "shared/ui/Logo/Logo";
+import Text from "shared/ui/Text/Text";
 import Link from "@mui/material/Link";
 
 export const LoginForm = () => {

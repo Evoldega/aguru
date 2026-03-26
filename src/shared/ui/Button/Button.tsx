@@ -1,5 +1,5 @@
 import MuiButton from "@mui/material/Button";
-import { Button as styles } from "../styles/index";
+import styles from "./Button.module.scss";
 
 interface IButton {
     variant?: "text" | "outlined" | "contained";

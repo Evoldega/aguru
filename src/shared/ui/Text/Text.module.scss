@@ -8,7 +8,6 @@ p {
     color: $text-black;
 
     font-family: $cairo;
-    font-style: "Semi Bold";
     font-size: 40px;
     font-weight: 600;
     line-height: 110%;
@@ -19,7 +18,6 @@ p {
     color: $text-black;
 
     font-family: $cairo;
-    font-style: Bold;
     font-size: 24px;
     font-weight: 700;
     line-height: 45px;
@@ -30,10 +28,19 @@ p {
     color: $color-black-secondary;
 
     font-family: $cairo;
-    font-style: Bold;
     font-size: 20px;
     font-weight: 700;
     line-height: 20px;
+    letter-spacing: 0%;
+}
+
+.h4 {
+    color: $text-black;
+
+    font-family: $cairo;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
     letter-spacing: 0%;
 }
 
@@ -55,12 +62,56 @@ p {
     letter-spacing: 0%;
 }
 
+.secondary3 {
+    color: $color-black;
+    font-family: $roboto-mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0%;
+}
+.secondary3_1 {
+    color: $color-gray-alt;
+    font-family: $roboto-mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0%;
+}
+
+.secondary4 {
+    color: $color-gray-alt;
+    font-family: $cairo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+}
+
+.secondary5 {
+    color: $color-gray-alt;
+    font-family: $roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+}
+
 .regular1 {
     color: $color-gray-medium;
     font-family: $inter;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.regular2 {
+    color: $color-white;
+    font-family: $cairo;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
     letter-spacing: 0%;
 }
 
@@ -73,6 +124,13 @@ p {
     letter-spacing: -1%;
 }
 
+.bold2 {
+    font-family: $sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
 .label {
     color: $text-black;
 
@@ -82,4 +140,12 @@ p {
     line-height: 150%;
     letter-spacing: -1.5%;
     text-align: left; 
+}
+
+.cell {
+    font-family: $sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0%;
 }

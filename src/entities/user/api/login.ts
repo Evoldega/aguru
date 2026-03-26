@@ -14,5 +14,4 @@ export const loginRequest = async (username: string, password: string) => {
   }
 
   return res.json();
-
 };

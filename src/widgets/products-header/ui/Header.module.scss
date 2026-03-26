@@ -1,0 +1,17 @@
+.header {
+    display: grid;
+    grid-template-columns: minmax(min-content, 403px) minmax(403px, 1023px) minmax(auto, 403px);
+    justify-content: space-between;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 0 30px;
+    background-color: $color-white;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding-right: 30px;
+}

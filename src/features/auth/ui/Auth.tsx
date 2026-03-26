@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from "../model/useAuthStore";
 import { useRememberMeStore } from "../model/useRememberMeStore";
 import { 
@@ -21,10 +22,10 @@ import cross from "assets/cross.svg";
 import lock from "assets/lock.svg";
 
 
-import styles from "../styles/Auth.module.scss"
-import Button from "shared/ui/Button";
-import Text from "shared/ui/Text";
-import Loader from "shared/ui/Loader";
+import styles from "./Auth.module.scss"
+import Button from "shared/ui/Button/Button";
+import Text from "shared/ui/Text/Text";
+import Loader from "shared/ui/Loader/Loader";
 
 export const Auth = () => {
   const [userName, setUserName] = useState("");
@@ -32,6 +33,8 @@ export const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formIsValid, setFormIsValid] = useState(true);
 
+  const navigate = useNavigate();
+  
   const { loading, error, login, reset } = useAuthStore();
   const { rememberMe, setRememberMe } = useRememberMeStore();
 
@@ -44,7 +47,9 @@ export const Auth = () => {
     }
 
     await login(userName, password, rememberMe);
+    navigate('/', { replace: true });
   };
+
   return (
     <div className={styles.form}>
       <div className={styles.inputWrapper}>
@@ -180,7 +185,7 @@ export const Auth = () => {
       <Snackbar 
         open={!!error} 
         autoHideDuration={5000}
-        anchorOrigin={{vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'center' }}
         onClose={reset}
       >
         <Alert
