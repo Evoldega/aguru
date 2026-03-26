@@ -16,34 +16,75 @@ interface UserState {
   user: User | null;
   tokens: AuthTokens | null;
   isAuthenticated: boolean;
-  setUserData: (data: { user: User; tokens: AuthTokens }) => void;
+
+  setUserData: (data: { user: User; tokens: AuthTokens }, rememberMe: boolean) => void;
   logout: () => void;
 }
 
+const STORAGE_KEY = 'user-data';
+
 export const useUserStore = create<UserState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       user: null,
       tokens: null,
       isAuthenticated: false,
 
-      setUserData: (data) =>
-        set({
+      setUserData: (data, rememberMe) => {
+        const state = {
           user: data.user,
           tokens: data.tokens,
           isAuthenticated: true,
-        }),
+        };
 
-      logout: () => set({ user: null, tokens: null, isAuthenticated: false }),
+        set(state);
+
+        if (rememberMe) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } else {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      },
+
+      logout: () => {
+        set({ user: null, tokens: null, isAuthenticated: false });
+
+        localStorage.removeItem(STORAGE_KEY);
+        sessionStorage.removeItem(STORAGE_KEY);
+      },
     }),
     {
-      name: 'user-data',
-      storage: createJSONStorage(() => localStorage),
+      name: STORAGE_KEY,
+
+      storage: createJSONStorage(() => sessionStorage),
 
       partialize: (state) => ({
         user: state.user,
         tokens: state.tokens,
+        isAuthenticated: state.isAuthenticated,
       }),
+
+      onRehydrateStorage: () => (state) => {
+        if (!state?.isAuthenticated) {
+          const saved = localStorage.getItem(STORAGE_KEY);
+
+          if (saved) {
+            try {
+              const parsed = JSON.parse(saved);
+
+              state?.setUserData(
+                {
+                  user: parsed.user,
+                  tokens: parsed.tokens,
+                },
+                true
+              );
+            } catch (e) {
+              console.error('Failed to restore session', e);
+            }
+          }
+        }
+      },
     }
   )
 );
